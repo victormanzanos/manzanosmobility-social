@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+LaunchAgent: refresco semanal (domingo) del long-lived Instagram token
+de @manzanosmobility (caduca a ~60 días; el refresh lo renueva).
+
+Instalación (cuando exista el token IG en el Keychain):
+  cp ~/manzanosmobility-social/com.manzanosmobility.igtokenrefresh.plist ~/Library/LaunchAgents/
+  launchctl load -w ~/Library/LaunchAgents/com.manzanosmobility.igtokenrefresh.plist
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.manzanosmobility.igtokenrefresh</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/victor/manzanosmobility-social/run_refresh.sh</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict><key>Weekday</key><integer>0</integer><key>Hour</key><integer>10</integer><key>Minute</key><integer>41</integer></dict>
+    </array>
+    <key>StandardOutPath</key>
+    <string>/Users/victor/manzanosmobility-social/token-refresh-launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/victor/manzanosmobility-social/token-refresh-launchd.err.log</string>
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>

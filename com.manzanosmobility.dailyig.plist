@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+LaunchAgent: publicación @manzanosmobility (cada 4 días, ordinal%4==1).
+Dispara a 4 horas distintas (≠ habitat/palacio/wines) para coger el Mac despierto.
+El motor es idempotente (1 publicación/día por .daily_state.json).
+
+Instalación (cuando exista el token IG en el Keychain):
+  cp ~/manzanosmobility-social/com.manzanosmobility.dailyig.plist ~/Library/LaunchAgents/
+  launchctl load -w ~/Library/LaunchAgents/com.manzanosmobility.dailyig.plist
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>Label</key>
+    <string>com.manzanosmobility.dailyig</string>
+    <key>ProgramArguments</key>
+    <array>
+        <string>/Users/victor/manzanosmobility-social/run_daily.sh</string>
+    </array>
+    <key>StartCalendarInterval</key>
+    <array>
+        <dict><key>Hour</key><integer>12</integer><key>Minute</key><integer>23</integer></dict>
+        <dict><key>Hour</key><integer>15</integer><key>Minute</key><integer>7</integer></dict>
+        <dict><key>Hour</key><integer>17</integer><key>Minute</key><integer>19</integer></dict>
+        <dict><key>Hour</key><integer>19</integer><key>Minute</key><integer>2</integer></dict>
+    </array>
+    <key>StandardOutPath</key>
+    <string>/Users/victor/manzanosmobility-social/launchd.out.log</string>
+    <key>StandardErrorPath</key>
+    <string>/Users/victor/manzanosmobility-social/launchd.err.log</string>
+    <key>RunAtLoad</key>
+    <false/>
+</dict>
+</plist>
