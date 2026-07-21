@@ -320,7 +320,9 @@ def main():
             url = gh_upload(real_path, f"{base}-{h}{ext.lower()}")
             time.sleep(5)
             pr = publish_image(url, caption=real_cap)
-            if pr.get("permalink"):
+            # WHY: id basta — el post YA está publicado aunque el fetch del permalink
+            # falle por red; sin esto se publicaba TAMBIÉN el post de marca (duplicado)
+            if pr.get("permalink") or pr.get("id"):
                 is_real = True; cap = real_cap; post_url = url
             else:
                 print("Foto real falló, fallback a marca:", json.dumps(pr)[:200])
