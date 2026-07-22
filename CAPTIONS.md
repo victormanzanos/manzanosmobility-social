@@ -12,7 +12,7 @@ Reglas de captions (Constitución Art. I):
 
 ---
 
-## 5 POSTS
+## 6 POSTS
 
 ### `01-taycan.jpg`
 Silencio, par instantáneo y 530 CV entre viñedos. 🏔️
@@ -53,6 +53,14 @@ Más información en el link de la bio.
 
 #ManzanosMobility #DBoat #YatesAMotor #Nautica #Boating #LuxuryLifestyle #España #USA
 
+### `06-dboat-puesto-mando.jpg`
+Un puesto de mando con lógica de deportivo. 🖤
+En el DBoat Diamond 550 la consola envuelve al patrón como el salpicadero de un coche: pantalla de navegación integrada en el mismo plano, mandos justo donde la mano los busca, tapicería acolchada y madera en cubierta.
+Es el cruce de dos mundos: diseño de superyate y herencia del automóvil.
+Más información en el link de la bio.
+
+#ManzanosMobility #DBoat #Diamond550 #Nautica #Yates #InteriorDesign #LuxuryBoats #MotorYacht
+
 ---
 
 ## STORIES
@@ -68,3 +76,6 @@ Cayenne S · Tu escapada premium
 
 ### `04-dboat-nav-story.jpg`
 DBoat · Certificación CE, 30+ años de astillero
+
+### `06-dboat-puesto-mando-story.jpg`
+Diamond 550 · Puesto de mando con alma de deportivo
