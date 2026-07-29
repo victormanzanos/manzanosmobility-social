@@ -12,7 +12,7 @@ Reglas de captions (Constitución Art. I):
 
 ---
 
-## 6 POSTS
+## 7 POSTS
 
 ### `01-taycan.jpg`
 Silencio, par instantáneo y 530 CV entre viñedos. 🏔️
@@ -61,6 +61,14 @@ Más información en el link de la bio.
 
 #ManzanosMobility #DBoat #Diamond550 #Nautica #Yates #InteriorDesign #LuxuryBoats #MotorYacht
 
+### `07-importacion-coches.jpg`
+El coche que buscas quizá esté al otro lado del Atlántico. 🌎
+El mercado de Estados Unidos concentra ediciones especiales y configuraciones que en Europa apenas circulan. En Manzanos Mobility lo convertimos en una experiencia llave en mano: seleccionamos la unidad, verificamos su historial y su estado real, y gestionamos la importación directa con toda la homologación incluida.
+Compraventa premium sin sorpresas.
+Más información en el link de la bio.
+
+#ManzanosMobility #ImportacionCoches #CochesDeLujo #CompraventaVehiculos #CochesPremium #España #USA #LuxuryMobility
+
 ---
 
 ## STORIES
@@ -79,3 +87,6 @@ DBoat · Certificación CE, 30+ años de astillero
 
 ### `06-dboat-puesto-mando-story.jpg`
 Diamond 550 · Puesto de mando con alma de deportivo
+
+### `07-importacion-coches-story.jpg`
+Importación premium desde EE.UU. · Historial, homologación y compraventa incluidos
