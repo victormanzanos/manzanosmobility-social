@@ -12,7 +12,7 @@ Reglas de captions (Constitución Art. I):
 
 ---
 
-## 7 POSTS
+## 8 POSTS
 
 ### `01-taycan.jpg`
 Silencio, par instantáneo y 530 CV entre viñedos. 🏔️
@@ -69,6 +69,14 @@ Más información en el link de la bio.
 
 #ManzanosMobility #ImportacionCoches #CochesDeLujo #CompraventaVehiculos #CochesPremium #España #USA #LuxuryMobility
 
+### `08-alquiler-yates.jpg`
+El Mediterráneo se disfruta mejor desde el agua. ⚓
+Alquiler de yates de lujo con Manzanos Mobility: una jornada a bordo, calas que solo se alcanzan navegando y el confort de una embarcación premium a tu disposición.
+En tierra y en el mar, movilidad de lujo de una empresa familiar desde 1890.
+Más información en el link de la bio.
+
+#ManzanosMobility #Yates #AlquilerYates #Mediterraneo #LuxuryMobility #Nautica #VidaEnElMar #LuxuryLifestyle
+
 ---
 
 ## STORIES
@@ -90,3 +98,6 @@ Diamond 550 · Puesto de mando con alma de deportivo
 
 ### `07-importacion-coches-story.jpg`
 Importación premium desde EE.UU. · Historial, homologación y compraventa incluidos
+
+### `08-alquiler-yates-story.jpg`
+Alquiler de yates de lujo · El Mediterráneo desde el agua
