@@ -12,7 +12,7 @@ Reglas de captions (Constitución Art. I):
 
 ---
 
-## 8 POSTS
+## 9 POSTS
 
 ### `01-taycan.jpg`
 Silencio, par instantáneo y 530 CV entre viñedos. 🏔️
@@ -77,6 +77,14 @@ Más información en el link de la bio.
 
 #ManzanosMobility #Yates #AlquilerYates #Mediterraneo #LuxuryMobility #Nautica #VidaEnElMar #LuxuryLifestyle
 
+### `09-cayenne-hybrid.jpg`
+Potencia deportiva y eficiencia eléctrica en el mismo SUV. ⚡
+El Porsche Cayenne E-Hybrid combina 519 CV con la posibilidad de rodar en modo 100% eléctrico: el compañero perfecto para recorrer los puertos de montaña de Navarra y La Rioja sin renunciar a nada.
+Alquiler desde 950 € al día o 2.500 € a la semana, impuestos y seguro incluidos.
+Más información en el link de la bio.
+
+#ManzanosMobility #PorscheCayenne #CayenneEHybrid #AlquilerPorsche #Navarra #LaRioja #SUVDeportivo #Porsche
+
 ---
 
 ## STORIES
@@ -101,3 +109,6 @@ Importación premium desde EE.UU. · Historial, homologación y compraventa incl
 
 ### `08-alquiler-yates-story.jpg`
 Alquiler de yates de lujo · El Mediterráneo desde el agua
+
+### `09-cayenne-hybrid-story.jpg`
+Cayenne E-Hybrid · 519 CV, potencia deportiva y modo eléctrico

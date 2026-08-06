@@ -34,8 +34,11 @@ BASE     = "https://graph.instagram.com/v23.0"
 REPO     = "victormanzanos/manzanosmobility-social"
 H        = "#ManzanosMobility"   # brand hashtag — siempre se mantiene
 
-# Cadencia: cada 4 días (julian ordinal % 4 == 1)
-CYCLE_DIV = 4
+# Cadencia: cada 2 días, en días IMPARES (julian ordinal % 2 == 1).
+# WHY impares: Habitat ocupa los pares (%2==0); compartimos día con Palacio
+# (también impares) pero en horas distintas (ver com.manzanosmobility.dailyig.plist),
+# así que nunca hay dos publicaciones simultáneas desde esta misma IP.
+CYCLE_DIV = 2
 CYCLE_DAY = 1
 
 # Foto real intercalada — 1 real cada N posts de marca (drop folder ~/manzanosmobility-social/reales)

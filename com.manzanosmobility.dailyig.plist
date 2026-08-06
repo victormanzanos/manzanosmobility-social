@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
-LaunchAgent: publicación @manzanosmobility (cada 4 días, ordinal%4==1).
-Dispara a 4 horas distintas (≠ habitat/palacio/wines) para coger el Mac despierto.
+LaunchAgent: publicación @manzanosmobility (cada 2 días, ordinal%2==1).
+Dispara a 4 horas distintas para coger el Mac despierto; el motor publica en el
+primer disparo del día y los siguientes salen por idempotencia.
+Horas elegidas SIN colisión con las otras 6 cuentas IG del Mac (a ≥10 min de
+enterprises 16:44/19:15, manzanos 16:11, agolfcars 19:47, palacio 15:32).
 El motor es idempotente (1 publicación/día por .daily_state.json).
 
 Instalación (cuando exista el token IG en el Keychain):
@@ -20,9 +23,9 @@ Instalación (cuando exista el token IG en el Keychain):
     <key>StartCalendarInterval</key>
     <array>
         <dict><key>Hour</key><integer>12</integer><key>Minute</key><integer>23</integer></dict>
-        <dict><key>Hour</key><integer>15</integer><key>Minute</key><integer>7</integer></dict>
-        <dict><key>Hour</key><integer>17</integer><key>Minute</key><integer>19</integer></dict>
-        <dict><key>Hour</key><integer>19</integer><key>Minute</key><integer>2</integer></dict>
+        <dict><key>Hour</key><integer>14</integer><key>Minute</key><integer>9</integer></dict>
+        <dict><key>Hour</key><integer>16</integer><key>Minute</key><integer>22</integer></dict>
+        <dict><key>Hour</key><integer>19</integer><key>Minute</key><integer>34</integer></dict>
     </array>
     <key>StandardOutPath</key>
     <string>/Users/victor/manzanosmobility-social/launchd.out.log</string>
