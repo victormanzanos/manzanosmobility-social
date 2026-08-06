@@ -12,7 +12,7 @@ Reglas de captions (Constitución Art. I):
 
 ---
 
-## 9 POSTS
+## 11 POSTS
 
 ### `01-taycan.jpg`
 Silencio, par instantáneo y 530 CV entre viñedos. 🏔️
@@ -85,6 +85,22 @@ Más información en el link de la bio.
 
 #ManzanosMobility #PorscheCayenne #CayenneEHybrid #AlquilerPorsche #Navarra #LaRioja #SUVDeportivo #Porsche
 
+### `10-escalade.jpg`
+El SUV americano por excelencia, ahora a tu alcance en España. 🇺🇸
+Cadillac Escalade 2026: presencia imponente, siete plazas de lujo y una tecnología de a bordo que marca la diferencia. Lo importamos directamente desde Estados Unidos con todos los trámites de homologación incluidos.
+Seleccionamos la unidad, verificamos su historial y te la entregamos lista para circular.
+Más información en el link de la bio.
+
+#ManzanosMobility #CadillacEscalade #Escalade2026 #ImportacionCoches #SUVAmericano #CochesDeLujo #España #USA
+
+### `11-suburban.jpg`
+Espacio sin concesiones, para los que no renuncian a nada. 🇺🇸
+Chevrolet Suburban 2026: el todocamino familiar de referencia en Estados Unidos, con capacidad para toda la familia y el equipaje que haga falta. Importación directa desde EE.UU. con homologación completa incluida.
+Un icono americano que apenas se ve por las carreteras europeas.
+Más información en el link de la bio.
+
+#ManzanosMobility #ChevroletSuburban #Suburban2026 #ImportacionCoches #SUVAmericano #CompraventaVehiculos #España #USA
+
 ---
 
 ## STORIES
@@ -112,3 +128,9 @@ Alquiler de yates de lujo · El Mediterráneo desde el agua
 
 ### `09-cayenne-hybrid-story.jpg`
 Cayenne E-Hybrid · 519 CV, potencia deportiva y modo eléctrico
+
+### `10-escalade-story.jpg`
+Cadillac Escalade 2026 · Importación directa desde EE.UU.
+
+### `11-suburban-story.jpg`
+Chevrolet Suburban 2026 · Homologación incluida
