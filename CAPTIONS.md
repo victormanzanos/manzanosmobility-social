@@ -12,7 +12,7 @@ Reglas de captions (Constitución Art. I):
 
 ---
 
-## 11 POSTS
+## 12 POSTS
 
 ### `03-mobility.jpg`
 Movilidad de lujo sin límites. ✨
@@ -101,6 +101,14 @@ Más información en el link de la bio.
 
 #ManzanosMobility #ImportacionCoches #CochesDeLujo #CompraventaVehiculos #CochesPremium #España #USA #LuxuryMobility
 
+### `12-ruta-porsche-bardenas.jpg`
+Del semidesierto al viñedo, en un solo día al volante. 🏜️🍇
+Diseñamos una ruta en Porsche que cruza las Bardenas Reales, reserva de la biosfera de la UNESCO en Navarra, y termina entre los viñedos de La Rioja. Rectas limpias, curvas abiertas y el placer de conducción como hilo conductor, ya sea al mando de un Taycan eléctrico o de un Cayenne.
+Alquiler de Porsche desde 950 € al día o 2.500 € a la semana, con impuestos y seguro incluidos.
+Más información en el link de la bio.
+
+#ManzanosMobility #AlquilerPorsche #BardenasReales #Navarra #LaRioja #Porsche #RoadTrip #CochesDeLujo
+
 ---
 
 ## STORIES
@@ -134,3 +142,6 @@ Cadillac Escalade 2026 · Importación directa desde EE.UU.
 
 ### `11-suburban-story.jpg`
 Chevrolet Suburban 2026 · Homologación incluida
+
+### `12-ruta-porsche-bardenas-story.jpg`
+Ruta en Porsche · Bardenas Reales y viñedos de La Rioja
