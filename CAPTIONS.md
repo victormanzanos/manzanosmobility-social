@@ -12,7 +12,7 @@ Reglas de captions (Constitución Art. I):
 
 ---
 
-## 12 POSTS
+## 13 POSTS
 
 ### `03-mobility.jpg`
 Movilidad de lujo sin límites. ✨
@@ -109,6 +109,15 @@ Más información en el link de la bio.
 
 #ManzanosMobility #AlquilerPorsche #BardenasReales #Navarra #LaRioja #Porsche #RoadTrip #CochesDeLujo
 
+### `13-verificacion.jpg`
+Comprar bien empieza mucho antes de firmar. 🔍🚗
+En Manzanos Mobility no vendemos coches: acompañamos una decisión importante. Seleccionamos y verificamos cada unidad premium (estado mecánico, carrocería y mantenimiento) y elaboramos un informe de historial para que compres con la tranquilidad de saber que la unidad es exactamente lo que te contamos.
+También en la importación directa desde EE.UU., con homologación y asesoramiento incluidos.
+Empresa familiar desde 1890.
+Más información en el link de la bio.
+
+#ManzanosMobility #CompraventaPremium #CochesDeLujo #ImportacionEEUU #Navarra #LaRioja #LuxuryMobility #VehiculosPremium
+
 ---
 
 ## STORIES
@@ -145,3 +154,6 @@ Chevrolet Suburban 2026 · Homologación incluida
 
 ### `12-ruta-porsche-bardenas-story.jpg`
 Ruta en Porsche · Bardenas Reales y viñedos de La Rioja
+
+### `13-verificacion-story.jpg`
+Compra premium con garantías · Verificación e informe de historial de cada unidad
