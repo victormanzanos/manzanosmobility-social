@@ -12,7 +12,7 @@ Reglas de captions (Constitución Art. I):
 
 ---
 
-## 13 POSTS
+## 14 POSTS
 
 ### `03-mobility.jpg`
 Movilidad de lujo sin límites. ✨
@@ -118,6 +118,14 @@ Más información en el link de la bio.
 
 #ManzanosMobility #CompraventaPremium #CochesDeLujo #ImportacionEEUU #Navarra #LaRioja #LuxuryMobility #VehiculosPremium
 
+### `14-dboat-construccion.jpg`
+Detrás de esta silueta hay un proceso, no solo un acabado. ⚓
+Cada DBoat se somete a rigurosas pruebas en todas las fases de producción y navega con certificación CE, con más de 30 años de experiencia de astillero detrás. El diseño llega sobre esa base: líneas de superyate, tendencias automovilísticas, funcionalidad y ergonomía.
+En exclusiva a través de Manzanos Mobility en España y EE.UU.
+Más información en el link de la bio.
+
+#ManzanosMobility #DBoat #Diamond550 #CertificacionCE #Nautica #Yates #LuxuryBoats #MotorYacht
+
 ---
 
 ## STORIES
@@ -157,3 +165,6 @@ Ruta en Porsche · Bardenas Reales y viñedos de La Rioja
 
 ### `13-verificacion-story.jpg`
 Compra premium con garantías · Verificación e informe de historial de cada unidad
+
+### `14-dboat-construccion-story.jpg`
+DBoat · Certificación CE y pruebas en todas las fases de producción
