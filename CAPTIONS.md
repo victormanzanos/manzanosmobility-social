@@ -12,7 +12,7 @@ Reglas de captions (Constitución Art. I):
 
 ---
 
-## 14 POSTS
+## 15 POSTS
 
 ### `03-mobility.jpg`
 Movilidad de lujo sin límites. ✨
@@ -126,6 +126,14 @@ Más información en el link de la bio.
 
 #ManzanosMobility #DBoat #Diamond550 #CertificacionCE #Nautica #Yates #LuxuryBoats #MotorYacht
 
+### `15-taycan-turbo.jpg`
+680 CV que no hacen ruido. ⚡
+El Porsche Taycan Turbo acelera de 0 a 100 en 3,2 segundos, y lo hace en silencio: eso cambia por completo la forma de recorrer Navarra y La Rioja. Si prefieres autonomía antes que cifras, el Taycan 4S firma 530 CV y hasta 512 kilómetros entre viñedos.
+Alquiler desde 950 € al día o 2.500 € a la semana, impuestos y seguro incluidos.
+Más información en el link de la bio.
+
+#ManzanosMobility #PorscheTaycan #TaycanTurbo #AlquilerPorsche #Navarra #LaRioja #CocheElectrico #Porsche
+
 ---
 
 ## STORIES
@@ -168,3 +176,6 @@ Compra premium con garantías · Verificación e informe de historial de cada un
 
 ### `14-dboat-construccion-story.jpg`
 DBoat · Certificación CE y pruebas en todas las fases de producción
+
+### `15-taycan-turbo-story.jpg`
+Taycan Turbo · 680 CV y de 0 a 100 en 3,2 segundos, en silencio
