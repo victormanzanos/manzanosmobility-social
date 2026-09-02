@@ -12,7 +12,7 @@ Reglas de captions (Constitución Art. I):
 
 ---
 
-## 15 POSTS
+## 16 POSTS
 
 ### `03-mobility.jpg`
 Movilidad de lujo sin límites. ✨
@@ -134,6 +134,14 @@ Más información en el link de la bio.
 
 #ManzanosMobility #PorscheTaycan #TaycanTurbo #AlquilerPorsche #Navarra #LaRioja #CocheElectrico #Porsche
 
+### `16-charter-yate-septiembre.jpg`
+Septiembre es cuando el Mediterráneo se deja navegar mejor. ⚓
+Terminada la temporada alta, el mar conserva el calor de todo el verano, las calas recuperan su espacio y los puertos vuelven a un ritmo pausado. Es la misma luz dorada de siempre, pero con sitio para disfrutarla sin prisa.
+Diseñamos chárters de yate con tripulación profesional y sin paquetes cerrados: escuchamos tus fechas, cuántos sois y qué tipo de viaje buscas, y construimos contigo el itinerario y el ritmo de a bordo.
+Más información en el link de la bio.
+
+#ManzanosMobility #CharterYate #Yates #Mediterraneo #Nautica #LuxuryMobility #VidaEnElMar #Septiembre
+
 ---
 
 ## STORIES
@@ -179,3 +187,6 @@ DBoat · Certificación CE y pruebas en todas las fases de producción
 
 ### `15-taycan-turbo-story.jpg`
 Taycan Turbo · 680 CV y de 0 a 100 en 3,2 segundos, en silencio
+
+### `16-charter-yate-septiembre-story.jpg`
+Chárter de yate en septiembre · Calas con espacio, tripulación profesional e itinerario a medida
