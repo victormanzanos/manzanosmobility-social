@@ -12,7 +12,7 @@ Reglas de captions (Constitución Art. I):
 
 ---
 
-## 16 POSTS
+## 17 POSTS
 
 ### `03-mobility.jpg`
 Movilidad de lujo sin límites. ✨
@@ -142,6 +142,14 @@ Más información en el link de la bio.
 
 #ManzanosMobility #CharterYate #Yates #Mediterraneo #Nautica #LuxuryMobility #VidaEnElMar #Septiembre
 
+### `17-ruta-otono-vendimia.jpg`
+El otoño no es la temporada baja del norte, es su mejor ventana. 🍂🍇
+Entre septiembre y octubre la vendimia llena Navarra y La Rioja de color y de trabajo en el viñedo, las carreteras secundarias recuperan el silencio y la luz cae baja y dorada durante horas. Tres días que empiezan en el valle del Ebro camino de Haro, cruzan la Ribera hasta las Bardenas Reales y cierran entre Puente la Reina, Estella y las curvas del prepirineo navarro.
+El Porsche Cayenne S de 440 CV, o el Cayenne S Hybrid de 519 CV, encaja justo en esa mezcla de autovía, montaña y camino de viñedo. Alquiler desde 950 € al día o 2.500 € a la semana, con impuestos y seguro incluidos.
+Más información en el link de la bio.
+
+#ManzanosMobility #AlquilerPorsche #PorscheCayenne #Vendimia #Navarra #LaRioja #Otono #CochesDeLujo
+
 ---
 
 ## STORIES
@@ -190,3 +198,6 @@ Taycan Turbo · 680 CV y de 0 a 100 en 3,2 segundos, en silencio
 
 ### `16-charter-yate-septiembre-story.jpg`
 Chárter de yate en septiembre · Calas con espacio, tripulación profesional e itinerario a medida
+
+### `17-ruta-otono-vendimia-story.jpg`
+Ruta de vendimia en Cayenne · Del Ebro a las Bardenas y al prepirineo, desde 950 € al día
