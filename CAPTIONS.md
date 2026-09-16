@@ -12,7 +12,7 @@ Reglas de captions (Constitución Art. I):
 
 ---
 
-## 17 POSTS
+## 18 POSTS
 
 ### `03-mobility.jpg`
 Movilidad de lujo sin límites. ✨
@@ -150,6 +150,14 @@ Más información en el link de la bio.
 
 #ManzanosMobility #AlquilerPorsche #PorscheCayenne #Vendimia #Navarra #LaRioja #Otono #CochesDeLujo
 
+### `18-vida-a-bordo-dboat.jpg`
+El mar se entiende de verdad desde el timón. ⚓
+Un DBoat es un yate a motor con diseño inspirado en los superyates y en el mundo del automóvil, y esa herencia se nota en cuanto sujetas el timón. Detrás de cada unidad hay más de 30 años de astillero y certificación CE, para que a bordo solo quede navegar.
+Mediterráneo en temporada, Florida cuando Europa se abriga: comercializamos DBoat en exclusiva en España y Estados Unidos. El otoño es buen momento para planificar la próxima temporada.
+Más información en el link de la bio.
+
+#ManzanosMobility #DBoat #Diamond550 #Yates #Mediterraneo #Florida #Nautica #LuxuryMobility
+
 ---
 
 ## STORIES
@@ -201,3 +209,6 @@ Chárter de yate en septiembre · Calas con espacio, tripulación profesional e 
 
 ### `17-ruta-otono-vendimia-story.jpg`
 Ruta de vendimia en Cayenne · Del Ebro a las Bardenas y al prepirineo, desde 950 € al día
+
+### `18-vida-a-bordo-dboat-story.jpg`
+Vida a bordo de un DBoat · Del Mediterráneo a Florida, en exclusiva en España y EE.UU.
