@@ -4,3 +4,10 @@ __pycache__/
 reales/
 token-logs/
 published-log
+cand/
+raw/*-px-*.jpg
+raw/s[0-9][0-9][0-9]-*.jpg
+.raw_hash_cache.json
+.image_index.json
+.published_images.json
+*.bak-*

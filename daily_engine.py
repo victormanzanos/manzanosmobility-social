@@ -7,7 +7,7 @@ de red) con:
 - Credenciales propias (MANZANOSMOBILITY_IG_ACCESS_TOKEN / _ACCOUNT_ID)
 - Repo público propio: github.com/victormanzanos/manzanosmobility-social
 - Captions parseadas de CAPTIONS.md (single source of truth)
-- Cadencia cada 4 días: ordinal%4==1. Habitat publica pares (%2==0), Palacio
+- Cadencia cada 2 días: ordinal%2==1 (ver CYCLE_DIV). Habitat publica pares (%2==0), Palacio
   impares (%2==1), MW %4==0, JMC %4==2 → mobility solo coincide con Palacio
   1 de cada 4 días (cuentas distintas, sin problema).
 - Idempotencia (1 publicación/día), jitter, defer aleatorio, foto real opcional
@@ -139,10 +139,16 @@ def gh_upload(local_path, remote_name):
     if probe.returncode == 0:
         try:    sha = json.loads(probe.stdout).get("sha")
         except: sha = None
+        # WHY: el cuerpo va por STDIN (--input -), NUNCA como argumento -f content=<b64>.
+    # Incidencia 2026-08-20 (@manzanosenterprises): una foto de 899 KB da un base64 de
+    # ~1,20 MB y revienta el ARG_MAX de macOS (1.048.576 B) con "[Errno 7] Argument list
+    # too long". Toda foto real de mas de ~780 KB fallaba SIEMPRE y caia al post de marca,
+    # en silencio. Por stdin no hay limite de tamano.
+    body = {"message": f"Add real photo {remote_name}", "content": content_b64}
+    if sha: body["sha"] = sha
     args = ["gh", "api", "--method", "PUT", f"/repos/{REPO}/contents/{remote_path}",
-            "-f", f"message=Add real photo {remote_name}", "-f", f"content={content_b64}"]
-    if sha: args += ["-f", f"sha={sha}"]
-    r = subprocess.run(args, capture_output=True, text=True)
+            "--input", "-"]
+    r = subprocess.run(args, input=json.dumps(body), capture_output=True, text=True)
     if r.returncode != 0:
         raise RuntimeError(f"gh upload failed: {r.stderr.strip()[:300]}")
     return f"{RAW}/{remote_path}"
@@ -204,10 +210,10 @@ def publish_image(url, caption=None, story=False):
 
 # ── EMAIL RESUMEN ─────────────────────────────────────────────────────────
 def email_summary(html, post_path, story_path, subject):
-    pw = _secret("MANZANOS_SMTP_PASSWORD")
+    pw = _secret("VICTORIA_STERLING_EMAIL_PASSWORD")
     msg = MIMEMultipart("related")
     msg["Subject"] = subject
-    msg["From"]    = "assistant@manzanosenterprises.com"
+    msg["From"]    = "victoriasterling@manzanos.eu"
     msg["To"]      = "victor@manzanos.com"
     msg.attach(MIMEText(html, "html", "utf-8"))
     for cid, path in (("postimg", post_path), ("storyimg", story_path)):
@@ -217,9 +223,9 @@ def email_summary(html, post_path, story_path, subject):
             img.add_header("Content-Disposition", "inline", filename=os.path.basename(path))
             msg.attach(img)
         except Exception as e: print("attach failed", path, e)
-    with smtplib.SMTP_SSL("manzanosenterprises-com.correoseguro.dinaserver.com", 465,
+    with smtplib.SMTP_SSL("manzanos-eu.correoseguro.dinaserver.com", 465,
                           context=ssl.create_default_context()) as srv:
-        srv.login("assistant@manzanosenterprises.com", pw)
+        srv.login("victoriasterling@manzanos.eu", pw)
         srv.send_message(msg)
 
 
@@ -243,6 +249,96 @@ def latest_post_body():
     if not data:
         return None
     return caption_body(data[0].get("caption"))
+
+
+# ── ANTI-REPETICIÓN 360 DÍAS (Victor, 21-sep-2026) ───────────────────────
+# Regla: ninguna FOTO se publica dos veces, ni en post ni en story, en 360 días.
+# Antes el motor elegía con POSTS[s["post"] % len(POSTS)]: contador circular sobre
+# 18 posts y 17 stories a cadencia 2 días, así que el post se repetía cada ~36
+# días y la story cada ~34. El ledger reconstruido del log y del feed real lo
+# confirmaba: 03-mobility, 01-taycan, 04-cayenne... ya habían salido 2 veces, y
+# 01-taycan-story 4 veces. Además 02-dboat-diamond y 06-dboat-puesto-mando son
+# tarjetas distintas con la MISMA foto, que ningún nombre de fichero delataba.
+#
+# Identidad de la foto = fichero fuente en raw/ + hash perceptual DCT de 64 bits
+# (imghash.py), para que la misma foto reescalada/recomprimida/recompuesta cuente
+# como la misma. NO aHash: confundía fotos de mar distintas entre sí.
+NO_REPEAT_DAYS = 360
+IMAGE_INDEX = os.path.join(LOCAL, ".image_index.json")   # tarjeta → {src, phash, kind}
+LEDGER      = os.path.join(LOCAL, ".published_images.json")
+# WHY 10: medido el 21-sep-2026 sobre raw/: la misma foto recompuesta (post vs
+# story de 15-taycan-turbo y 16-charter) da 4-8; dos fotos distintas, 16 o más.
+PHASH_NEAR  = 10
+
+def _ham(a, b):
+    return bin(int(a) ^ int(b)).count("1")
+
+_IDX_CACHE = None
+def image_index():
+    # WHY cache: se consulta por cada candidato al escoger; el fichero no cambia
+    # durante la ejecución.
+    global _IDX_CACHE
+    if _IDX_CACHE is None:
+        try:
+            _IDX_CACHE = json.load(open(IMAGE_INDEX))
+        except Exception:
+            _IDX_CACHE = {}
+    return _IDX_CACHE
+
+def ledger_load():
+    try:
+        return json.load(open(LEDGER))
+    except Exception:
+        return []
+
+def ledger_add(card, kind, date):
+    """Registra una publicación JUSTO tras confirmarla (igual que save_state)."""
+    ent = image_index().get(card)
+    if not ent:
+        print(f"⚠️ {card} no está en .image_index.json: publicada SIN registrar su foto")
+        return
+    led = ledger_load()
+    led.append({"date": date, "kind": kind, "card": card,
+                "src": ent["src"], "phash": ent["phash"]})
+    json.dump(led, open(LEDGER, "w"), indent=1)
+
+def recent_window(days=NO_REPEAT_DAYS, today=None):
+    today = today or datetime.date.today()
+    cut = str(today - datetime.timedelta(days=days))
+    srcs, ph = set(), []
+    for e in ledger_load():
+        if e.get("date", "") >= cut:
+            srcs.add(e.get("src"))
+            if e.get("phash"):
+                ph.append(e["phash"])
+    return srcs, ph
+
+def is_repeat(card, srcs, phashes, extra_phashes=()):
+    ent = image_index().get(card)
+    if not ent:
+        # WHY fail-closed: una tarjeta sin identidad es una foto que nadie ha
+        # comparado; publicarla es justo el agujero que se cierra aquí.
+        return True
+    if ent["src"] in srcs:
+        return True
+    return any(_ham(ent["phash"], p) <= PHASH_NEAR for p in list(phashes) + list(extra_phashes))
+
+def card_phash(card):
+    ent = image_index().get(card)
+    return ent["phash"] if ent else None
+
+def pick_fresh(items, idx, srcs, phashes, extra_phashes=()):
+    """Primera entrada desde idx cuya foto no salió en la ventana.
+    Devuelve (entrada, índice_siguiente, agotado). Devolver el índice USADO evita
+    el fallo de [[ig-rotation-tail-latency]] (proponer siempre la misma tarjeta)."""
+    n = len(items)
+    for step in range(n):
+        i = (idx + step) % n
+        it = items[i]
+        card = it[0] if isinstance(it, (tuple, list)) else it
+        if not is_repeat(card, srcs, phashes, extra_phashes):
+            return it, i + 1, False
+    return items[idx % n], idx + 1, True
 
 
 # ── CAPTION ROTATION (anti-spam hashtags) ─────────────────────────────────
@@ -273,17 +369,35 @@ def main():
     real_path  = real_items[0][0] if real_items else None
     real_cap   = real_items[0][1] if real_items else None
 
-    pf, cap = POSTS[s["post"] % len(POSTS)]
+    # Guardia de 360 días: ni post ni story repiten foto, y la story no puede
+    # llevar la foto del post de HOY (entra como extra_phashes).
+    # WHY: normalizar el contador; la baraja crece cada semana y un contador
+    # mayor que la lista hace ilegible el "salta N" del log.
+    s["post"] %= len(POSTS); s["story"] %= len(STORY_FILES)
+    _srcs, _ph = recent_window()
+    (pf, cap), post_idx, post_stale = pick_fresh(POSTS, s["post"], _srcs, _ph)
+    _post_ph = [p for p in (card_phash(pf),) if p]
+    sf, story_idx, story_stale = pick_fresh(STORY_FILES, s["story"], _srcs, _ph, _post_ph)
     cap = rotate_caption(cap)
-    sf  = STORY_FILES[s["story"] % len(STORY_FILES)]
     post_url  = f"{RAW}/posts/{pf}"
     story_url = f"{RAW}/stories/{sf}"
+    stale_msg = ""
+    if post_stale or story_stale:
+        stale_msg = ("⚠️ BARAJA AGOTADA: toda la rotación se publicó en los últimos "
+                     f"{NO_REPEAT_DAYS} días (post={post_stale}, story={story_stale}). "
+                     "Faltan imágenes nuevas: python3 add_images.py check")
+        print(stale_msg)
 
     if do_real:
         print(f"NEXT = FOTO REAL: {os.path.basename(real_path)}  (since_real={s.get('since_real',0)} ≥ {REAL_EVERY})")
         print(f"--- CAPTION ---\n{real_cap}\n---  (story: {sf})")
     else:
-        print(f"NEXT = POST MARCA: {pf}\nSTORY: {sf}\n--- CAPTION ---\n{cap}\n---  (real en {REAL_EVERY - s.get('since_real',0)} posts)")
+        _ix = image_index()
+        print(f"NEXT = POST MARCA: {pf}  [foto: {_ix.get(pf,{}).get('src','?')}]"
+              f"\nSTORY: {sf}  [foto: {_ix.get(sf,{}).get('src','?')}]"
+              f"\n(anti-repetición {NO_REPEAT_DAYS}d: post salta {post_idx-1-s['post']} entradas, "
+              f"story salta {story_idx-1-s['story']}; ledger {len(ledger_load())} publicaciones)"
+              f"\n--- CAPTION ---\n{cap}\n---  (real en {REAL_EVERY - s.get('since_real',0)} posts)")
 
     if DRY:
         print("DRY RUN — nada publicado.")
@@ -305,9 +419,10 @@ def main():
         if body_today and latest_post_body() == body_today:
             print("Post de hoy YA es el último del feed (idempotencia API) — re-sincronizo estado, no republico.")
             s["last_date"] = today
-            s["post"] += 1
+            s["post"] = post_idx
             s["since_real"] = s.get("since_real", 0) + 1
             save_state(s)
+            ledger_add(pf, "post", today)   # ya está en el feed: cuenta para los 360 días
             return
     if datetime.datetime.now().hour < 14 and random.random() < 0.40:
         print("Aplazo a franja posterior (rompe patrón horario).")
@@ -346,16 +461,18 @@ def main():
         if is_real:
             archive_real(real_path); s["since_real"] = 0
         else:
-            s["post"] += 1
+            s["post"] = post_idx
             s["since_real"] = s.get("since_real", 0) + 1
+            ledger_add(pf, "post", today)
         save_state(s)
 
     time.sleep(random.randint(20, 120))  # gap humano antes del story
     sr = publish_image(story_url, story=True)
     story_ok = bool(sr.get("permalink") or sr.get("id"))
     if story_ok:
-        s["story"] += 1
+        s["story"] = story_idx
         save_state(s)
+        ledger_add(sf, "story", today)
 
     plink = (pr.get("permalink")
              or (f"publicado (id {pr.get('id')}, permalink no disponible)" if pr.get("id")
@@ -381,7 +498,8 @@ def main():
         f"</tr></table>"
         f"<p style='color:#888;font-size:12px'>Caption:</p>"
         f"<pre style='white-space:pre-wrap;color:#555;font-size:12px'>{cap}</pre>"
-        f"<p style='color:#aaa;font-size:11px'>Cadencia cada 4 días (ordinal%4==1) · rotación automática.</p>",
+        f"<p style='color:#aaa;font-size:11px'>Cadencia cada 2 días (días impares) · rotación sin repetir foto en 360 días.</p>"
+        + (f"<p style='color:#b00'><b>{stale_msg}</b></p>" if stale_msg else ""),
         post_path, story_path, subject=subj
     )
 
