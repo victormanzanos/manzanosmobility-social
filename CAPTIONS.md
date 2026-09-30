@@ -1654,6 +1654,14 @@ Más información en el link de la bio.
 
 #ManzanosMobility #ChevroletSuburban #CadillacEscalade #ImportacionCoches #SUVAmericano #CompraventaVehiculos #Homologacion #USA
 
+### `206-ruta-irati-otono.jpg`
+El otoño en su versión más intensa está en el Pirineo navarro. 🍂
+La Selva de Irati, uno de los hayedo-abetales más extensos de Europa, cambia el verde por el amarillo, el naranja y el rojo. Dos días desde Pamplona: el valle de Salazar y Ochagavía el primero; Irati al amanecer, Aezkoa y Roncesvalles el segundo.
+Conocemos estas carreteras: fuimos Centro Porsche Pamplona. El Cayenne S Hybrid de 519 CV, el Cayenne S de 440 CV o el Taycan 4S eléctrico de 530 CV, desde 950 € al día o 2.500 € a la semana, con impuestos y seguro incluidos.
+Más información en el link de la bio.
+
+#ManzanosMobility #AlquilerPorsche #SelvaDeIrati #Pirineo #Navarra #Otono #Porsche #RoadTrip
+
 ---
 
 ## STORIES
