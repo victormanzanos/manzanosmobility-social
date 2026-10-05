@@ -20,6 +20,7 @@ Variables de entorno:
 import datetime, json, os, random, re, ssl, smtplib, subprocess, time
 import urllib.request, urllib.parse, urllib.error
 import base64, hashlib
+import ig_guard   # WHY: fail-closed; ver ig_guard.py (duplicados desde otro ordenador, 5-oct-2026)
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.mime.image import MIMEImage
@@ -129,12 +130,19 @@ def real_collect():
         out.append((path, cap))
     return out
 
+# WHY: launchd corre con PATH=/usr/bin:/bin:/usr/sbin:/sbin y gh vive en /usr/local/bin
+# (o /opt/homebrew/bin). Con "gh" a secas, la subida de fotos reales muere con
+# FileNotFoundError (pasó en @agolfcars el 4-oct-2026).
+import shutil
+GH = (shutil.which("gh") or next((c for c in ("/usr/local/bin/gh", "/opt/homebrew/bin/gh")
+                                  if os.path.exists(c)), "gh"))
+
 def gh_upload(local_path, remote_name):
     with open(local_path, "rb") as f:
         content_b64 = base64.b64encode(f.read()).decode()
     remote_path = f"reales/{remote_name}"
     sha = None
-    probe = subprocess.run(["gh", "api", f"/repos/{REPO}/contents/{remote_path}"],
+    probe = subprocess.run([GH, "api", f"/repos/{REPO}/contents/{remote_path}"],
                            capture_output=True, text=True)
     if probe.returncode == 0:
         try:    sha = json.loads(probe.stdout).get("sha")
@@ -146,7 +154,7 @@ def gh_upload(local_path, remote_name):
     # en silencio. Por stdin no hay limite de tamano.
     body = {"message": f"Add real photo {remote_name}", "content": content_b64}
     if sha: body["sha"] = sha
-    args = ["gh", "api", "--method", "PUT", f"/repos/{REPO}/contents/{remote_path}",
+    args = [GH, "api", "--method", "PUT", f"/repos/{REPO}/contents/{remote_path}",
             "--input", "-"]
     r = subprocess.run(args, input=json.dumps(body), capture_output=True, text=True)
     if r.returncode != 0:
@@ -424,6 +432,22 @@ def main():
             save_state(s)
             ledger_add(pf, "post", today)   # ya está en el feed: cuenta para los 360 días
             return
+    # Guardia anti-duplicados entre ordenadores (5-oct-2026): solo publica el Mac
+    # designado y nunca si el feed REAL ya tiene un post de hoy o ese mismo texto.
+    # Unico punto de publicacion del motor (marca y foto real). Si para, no hay story.
+    ensure_creds()
+    ok, why = ig_guard.host_ok()
+    if not ok:
+        print(f"⛔ GUARD host: {why}. No publico.")
+        return
+    why = ig_guard.feed_block(IGID, TOK, None if do_real else cap, base=BASE)
+    if why:
+        print(f"⛔ GUARD feed: {why}. No publico.")
+        if not do_real and "mismo texto" in why:
+            # La tarjeta ya salio (desde otro ordenador): cuenta para los 360 dias y se
+            # avanza, asi la franja siguiente coge la tarjeta nueva. last_date NO se marca.
+            s["post"] = post_idx; save_state(s); ledger_add(pf, "post", today)
+        return
     if datetime.datetime.now().hour < 14 and random.random() < 0.40:
         print("Aplazo a franja posterior (rompe patrón horario).")
         return
