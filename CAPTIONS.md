@@ -1662,6 +1662,14 @@ Más información en el link de la bio.
 
 #ManzanosMobility #AlquilerPorsche #SelvaDeIrati #Pirineo #Navarra #Otono #Porsche #RoadTrip
 
+### `207-comprar-yate-dboat.jpg`
+Comprar un yate empieza en tierra, no en el mar. ⚓
+Antes de mirar esloras, conviene responder cinco preguntas: para qué lo usarás, con quién navegarás, en qué aguas, si llevarás tú el timón y dónde amarrará el resto del año.
+Y una que no sale en las fotos: la certificación CE. Todos los DBoat la tienen, con más de 30 años de experiencia de astillero detrás. Te acompañamos en la compra de tu Diamond 550, en España o en EE.UU.
+Más información en el link de la bio.
+
+#ManzanosMobility #DBoat #Diamond550 #ComprarYate #Yates #MotorYacht #Nautica #VidaEnElMar
+
 ---
 
 ## STORIES
