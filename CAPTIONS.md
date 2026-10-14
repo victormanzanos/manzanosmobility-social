@@ -1670,6 +1670,14 @@ Más información en el link de la bio.
 
 #ManzanosMobility #DBoat #Diamond550 #ComprarYate #Yates #MotorYacht #Nautica #VidaEnElMar
 
+### `208-cayenne-otono.jpg`
+El otoño se viaja mejor acompañado. 🍂
+Viñedos ocres tras la vendimia, bodegas de Haro, el Palacio Real de Olite y el Camino de Santiago. Para una escapada en grupo por Navarra y La Rioja, un Porsche Cayenne: Cayenne S de 440 CV o Cayenne S Hybrid de 519 CV, con espacio para cuatro y su equipaje.
+Alquiler desde 950 € al día con impuestos y seguro incluidos.
+Lee la guía completa en nuestro blog, link en la bio.
+
+#ManzanosMobility #AlquilerPorsche #PorscheCayenne #Navarra #LaRioja #Otoño #Enoturismo #RoadTrip
+
 ---
 
 ## STORIES
