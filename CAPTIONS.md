@@ -1678,6 +1678,14 @@ Lee la guía completa en nuestro blog, link en la bio.
 
 #ManzanosMobility #AlquilerPorsche #PorscheCayenne #Navarra #LaRioja #Otoño #Enoturismo #RoadTrip
 
+### `209-camino-santiago.jpg`
+El Camino de Santiago también se recorre al volante. 🍂
+De Roncesvalles a Logroño: hayedos del Pirineo, el casco amurallado de Pamplona, el puente románico de Puente la Reina, Estella y Viana antes de entrar en La Rioja. Una ruta de otoño para dos o tres días, sin prisas.
+Para hacerla, un Porsche: Cayenne S de 440 CV para cuatro viajeros, Cayenne S Hybrid de 519 CV o Taycan 4S 100% eléctrico. Alquiler desde 950 € al día con impuestos y seguro incluidos.
+Lee la ruta completa en nuestro blog, link en la bio.
+
+#ManzanosMobility #AlquilerPorsche #CaminoDeSantiago #Navarra #LaRioja #PuenteLaReina #Otoño #RoadTrip
+
 ---
 
 ## STORIES
