@@ -1686,6 +1686,13 @@ Lee la ruta completa en nuestro blog, link en la bio.
 
 #ManzanosMobility #AlquilerPorsche #CaminoDeSantiago #Navarra #LaRioja #PuenteLaReina #Otoño #RoadTrip
 
+### `210-invernaje-yate.jpg`
+El final de la temporada también se navega. ⚓
+Cuando noviembre cierra la temporada en el Mediterráneo, un buen invernaje protege tu yate y te devuelve al agua en primavera sin sorpresas: limpieza a fondo con agua dulce, motores revisados por un servicio técnico especializado y baterías en buen estado.
+Te lo contamos paso a paso en nuestro blog. Enlace en la bio.
+
+#ManzanosMobility #Invernaje #Yates #MotorYacht #Nautica #Mediterraneo #VidaEnElMar #DBoat
+
 ---
 
 ## STORIES
