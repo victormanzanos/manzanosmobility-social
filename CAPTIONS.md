@@ -1693,6 +1693,14 @@ Te lo contamos paso a paso en nuestro blog. Enlace en la bio.
 
 #ManzanosMobility #Invernaje #Yates #MotorYacht #Nautica #Mediterraneo #VidaEnElMar #DBoat
 
+### `211-ruta-invierno-roncal.jpg`
+El Pirineo navarro cambia de carácter cuando llega el frío. ❄️🏔️
+De Pamplona a Burgui, Roncal e Isaba, y desde allí hacia el Valle de Belagua: hayedos sin hoja, pueblos de piedra con grandes chimeneas, queso Roncal y cumbres que en invierno se visten de blanco. Dos días de carretera tranquila en uno de los valles más bellos de Navarra.
+Para la montaña en invierno, el Porsche Cayenne S de 440 CV o el Cayenne S Hybrid de 519 CV: tracción total, posición elevada y espacio para el equipaje. Alquiler desde 950 € al día o 2.500 € a la semana, con impuestos y seguro incluidos.
+Ruta completa en el blog, link en la bio.
+
+#ManzanosMobility #AlquilerPorsche #PorscheCayenne #ValleDeRoncal #Pirineo #Navarra #Invierno #CochesDeLujo
+
 ---
 
 ## STORIES
